@@ -2,12 +2,18 @@ import '../css/app.scss';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import { FetchText } from './fetchText';
 import { Counter } from './counter';
+import { CreateList } from './createList';
+import { ConsolePrint } from './consolePrint';
 
 const fetchText = new FetchText;
+const createList = new CreateList;
+const consolePrint = new ConsolePrint;
 
 window.onload = function() {
   fetchText.getText().then(function(res){
-    const counter = new Counter(res.data);
-    console.log(counter.collectWords());
+    const counter = new Counter(res);
+    var list = counter.collectWords();
+    createList.insertListToDom(list);
+    consolePrint.createHistogram(list);
   }); 
 }

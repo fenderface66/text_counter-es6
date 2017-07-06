@@ -18,20 +18,7 @@ export class Counter {
   orderWordsByFrequency(arr) {
     var frequency = {}, value;
     var uniques = [];
-    var topThree = {       
-      first: {
-        word: null,
-        count: null
-      },
-      second: {
-        word: null,
-        count: null
-      },
-      third: {
-        word: null,
-        count: null
-      }
-    };
+    var topTwenty = [];
     
     // Compute frequencies of each value
     for(var i = 0; i < arr.length; i++) {
@@ -63,24 +50,11 @@ export class Counter {
     }
 
     //Return the sorted array with highest frequency at the the lowest index
-    uniques.sort(compareFrequency).slice(0, 3).map(function(word, index){
-      switch(index) {
-        case 0:
-          topThree.first.word = word;
-          topThree.first.count = frequency[word];
-          break;
-        case 1:
-          topThree.second.word = word;
-          topThree.second.count = frequency[word];
-          break;
-        case 2:
-          topThree.third.word = word;
-          topThree.third.count = frequency[word];
-          break;
-      }
+    uniques.sort(compareFrequency).slice(0, 20).map(function(word, index){
+      topTwenty.push([word, frequency[word]]);
     });
     
-    return topThree;
+    return topTwenty;
 
   }
   
