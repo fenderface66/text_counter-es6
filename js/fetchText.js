@@ -1,14 +1,12 @@
-import axios from 'axios';
+import { Http } from './http';
+const http = new Http;
 
 export class FetchText {
   
   getText() {
     
-    const request = axios({
-      method: 'get',
-      url: './model/book.txt',
-    })
-    
+    const request = http.makeRequest('GET', './model/book.txt');
+
     return request;
   }
     
