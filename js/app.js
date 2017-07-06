@@ -8,7 +8,6 @@ const fetchText = new FetchText;
 window.onload = function() {
   fetchText.getText().then(function(res){
     const counter = new Counter(res.data);
-    console.log(res);
-    counter.collectWords();
+    console.log(counter.collectWords());
   }); 
 }
