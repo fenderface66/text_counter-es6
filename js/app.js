@@ -1,5 +1,4 @@
 import '../css/app.scss';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import { FetchText } from './fetchText';
 import { Counter } from './counter';
 import { CreateList } from './createList';

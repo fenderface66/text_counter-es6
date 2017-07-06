@@ -12,5 +12,5 @@ npm install
 
 ### Running locally
 ```
-	npm run dev
-	```
+npm run dev
+```
