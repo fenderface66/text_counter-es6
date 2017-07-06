@@ -8,6 +8,6 @@ export class ConsolePrint {
         histogram.push([wordItem[0], bars])
       }
     })
-    console.table(histogram);
+    console.table(histogram);   
   }
 }
