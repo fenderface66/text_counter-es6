@@ -1,10 +1,12 @@
 export class Counter {
-  //Initialise class with boook text
+  
+  //Initialise class with book text
   constructor(text) {
     this.text = text;
     this.words = [];
     
   }
+  
   collectWords() {
     this.text = this.text.replace(/[.,\/#“”"!?$%\^&\*;:{}=\-_`~()]/g, " ")
     this.text = this.text.replace(/(\r\n|\n|\r)/gm, " ");
@@ -12,10 +14,11 @@ export class Counter {
     
     return this.orderWordsByFrequency(this.words);
   }
+  
   orderWordsByFrequency(arr) {
     var frequency = {}, value;
     var uniques = [];
-    var topThree = {
+    var topThree = {       
       first: {
         word: null,
         count: null
