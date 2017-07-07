@@ -12,3 +12,10 @@ npm install
 ```
 npm run dev
 ```
+
+### Histogram
+```
+In order to view the histogram you must have the console open
+prior to loading the page. Or you can refresh the page once you 
+have the page open.
+```

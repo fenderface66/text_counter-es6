@@ -1,0 +1,1 @@
+This directory is for storing text files that are to be counted for there word frequency.
